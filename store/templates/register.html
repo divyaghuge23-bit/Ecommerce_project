@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="col-md-6 offset-md-3">
+    <div class="card p-4 shadow">
+
+        <h3 class="text-center">Register</h3>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <input type="text" name="username" placeholder="Username" class="form-control mb-3" required>
+            <input type="email" name="email" placeholder="Email" class="form-control mb-3" required>
+            <input type="password" name="password" placeholder="Password" class="form-control mb-3" required>
+
+            <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+        </form>
+
+        <!-- ✅ LOGIN OPTION -->
+        <p class="text-center mt-3">
+            Already have an account?
+            <a href="{% url 'login' %}">Login</a>
+        </p>
+
+    </div>
+</div>
+
+{% endblock %}

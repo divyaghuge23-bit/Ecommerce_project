@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+
+        <!-- Product Image -->
+        <div class="col-md-6 text-center">
+            {% if product.image %}
+                <img src="{{ product.image.url }}" 
+                     class="img-fluid rounded shadow"
+                     style="max-height:400px;">
+            {% else %}
+                <img src="https://via.placeholder.com/400x400?text=No+Image"
+                     class="img-fluid rounded">
+            {% endif %}
+        </div>
+
+        <!-- Product Details -->
+        <div class="col-md-6">
+
+            <h2 class="mb-3">{{ product.name }}</h2>
+
+            <h4 class="text-success mb-3">
+                ₹ {{ product.price }}
+            </h4>
+
+            <p class="text-muted">
+                {{ product.description }}
+            </p>
+
+            {% if product.size %}
+                <p><strong>Size:</strong> {{ product.size }}</p>
+            {% endif %}
+
+            <!-- Buttons -->
+            <a href="#" class="btn btn-primary me-2">
+                Add to Cart
+            </a>
+
+            <a href="{% url 'home' %}" class="btn btn-secondary">
+                Back
+            </a>
+
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

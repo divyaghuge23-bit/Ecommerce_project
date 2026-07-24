@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+
+        <div class="col-md-8">
+
+            <div class="card shadow-lg border-0 text-center">
+
+                <div class="card-body p-5">
+
+                    <div class="mb-4">
+                        <span style="font-size:70px;">✅</span>
+                    </div>
+
+                    <h2 class="text-success">
+                        Your Order has been Placed Successfully!
+                    </h2>
+
+                    <p class="mt-3 text-muted">
+                        Thank you for shopping with us.
+                    </p>
+
+                    <hr>
+
+                    <p>
+                        <strong>Order Status:</strong>
+                        <span class="badge badge-success">
+                            Confirmed
+                        </span>
+                    </p>
+
+                    <p>
+                        Your order has been received and will be processed shortly.
+                    </p>
+
+                    <p>
+                        You will receive updates about your order soon.
+                    </p>
+
+                    <a href="{% url 'home' %}" class="btn btn-primary mt-3">
+                        Continue Shopping
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
