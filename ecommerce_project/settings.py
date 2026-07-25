@@ -31,7 +31,9 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ 'ecommerce-o816.onrender.com',
+    '127.0.0.1',
+    'localhost']
 
 
 # Application definition
